@@ -1,98 +1,298 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 📘 UKL XI RPL Backend – Sistem Autentikasi & Presensi
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+### 🔗 **Link Repository GitHub**
+[👉 Klik di sini untuk membuka repository](https://github.com/Nabilkencana22/UKL-XI-RPL-Backend-)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+> 💡 **Catatan:** Pastikan setiap update fitur baru (Auth, Users, Attendance) juga menambahkan screenshot output di bawah bagian “📸 Screenshot Output”.
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🧩 Deskripsi Proyek
+Proyek ini adalah **RESTful API** berbasis **NestJS** yang digunakan untuk:
+- 🔐 Autentikasi dan otorisasi pengguna  
+- 👤 Manajemen data pengguna (CRUD)  
+- 🕒 Pencatatan dan analisis presensi  
 
-## Project setup
+Didesain untuk kebutuhan sistem kehadiran sederhana di lingkungan sekolah atau perusahaan.
 
+---
+
+## ⚙️ Teknologi yang Digunakan
+- **NestJS (Node.js Framework)**
+- **TypeScript**
+- **JWT (JSON Web Token)**
+- **Bcrypt (Hashing Password)**
+- **DayJS (Date Handling)**
+- **Express.js**
+- **In-memory data (bisa dikembangkan ke PostgreSQL/MySQL)**
+
+---
+
+## 🚀 Langkah Instalasi
+
+1️⃣ **Clone Repository**
 ```bash
-$ npm install
+git clone https://github.com/Nabilkencana22/UKL-XI-RPL-Backend-.git
+cd UKL-XI-RPL-Backend-
 ```
 
-## Compile and run the project
-
+2️⃣ **Install Dependencies**
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm install
 ```
 
-## Run tests
-
+3️⃣ **Jalankan Server**
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start:dev
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+4️⃣ **Server Berjalan di:**
+```
+http://localhost:3000/api
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+## 🔑 Autentikasi (Auth)
 
-Check out a few resources that may come in handy when working with NestJS:
+### Endpoint: `/api/auth/login`
+**Method:** `POST`  
+**Deskripsi:** Login pengguna dan mendapatkan token autentikasi.
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+#### Request Body:
+```json
+{
+  "username": "string",
+  "password": "string"
+}
+```
 
-## Support
+#### Response:
+```json
+{
+  "status": "success",
+  "message": "Login berhasil",
+  "token": "jwt_token_here"
+}
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+📸 **Screenshot Output Login:**
+![Auth Login Screenshot](./screenshots/auth-login.png)
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 👥 Manajemen Pengguna (Users)
 
-## License
+### Tambah Pengguna  
+**POST** `/api/users`
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+```json
+{
+  "name": "John Doe",
+  "username": "johndoe",
+  "password": "123456",
+  "role": "siswa"
+}
+```
+
+**Response**
+```json
+{
+  "status": "success",
+  "message": "Pengguna berhasil ditambahkan",
+  "data": {
+    "id": 1,
+    "name": "John Doe",
+    "username": "johndoe",
+    "role": "siswa"
+  }
+}
+```
+
+📸 **Screenshot Output Tambah Pengguna:**
+![Users Create Screenshot](.Sreenshoot/Screenshot(84).png)
+
+---
+
+### Ubah Data Pengguna  
+**PUT** `/api/users/{id}`
+
+```json
+{
+  "name": "John Updated",
+  "username": "johnupdate",
+  "password": "654321",
+  "role": "karyawan"
+}
+```
+
+**Response**
+```json
+{
+  "status": "success",
+  "message": "Pengguna berhasil diubah",
+  "data": {
+    "id": 1,
+    "name": "John Updated",
+    "username": "johnupdate",
+    "role": "karyawan"
+  }
+}
+```
+
+📸 **Screenshot Output Update Pengguna:**
+![Users Update Screenshot](./screenshots/users-update.png)
+
+---
+
+### Ambil Data Pengguna  
+**GET** `/api/users/{id}`
+
+**Response**
+```json
+{
+  "status": "success",
+  "data": {
+    "id": 1,
+    "name": "John Updated",
+    "username": "johnupdate",
+    "role": "karyawan"
+  }
+}
+```
+
+📸 **Screenshot Output Get Pengguna:**
+![Users Get Screenshot](./screenshots/users-get.png)
+
+---
+
+## 🕒 Presensi (Attendance)
+
+### Mencatat Presensi  
+**POST** `/api/attendance`
+
+```json
+{
+  "user_id": 1,
+  "date": "2025-11-03",
+  "time": "07:45:00"
+}
+```
+
+**Response**
+```json
+{
+  "status": "success",
+  "message": "Presensi berhasil dicatat",
+  "data": {
+    "attendance_id": 1,
+    "user_id": 1,
+    "date": "2025-11-03",
+    "time": "07:45:00",
+    "status": "hadir"
+  }
+}
+```
+
+📸 **Screenshot Output Presensi:**
+![Attendance Create Screenshot](./screenshots/attendance-create.png)
+
+---
+
+### Riwayat Presensi  
+**GET** `/api/attendance/history/{user_id}`
+
+**Response**
+```json
+{
+  "status": "success",
+  "data": [
+    {
+      "attendance_id": 1,
+      "user_id": 1,
+      "date": "2025-11-03",
+      "time": "07:45:00",
+      "status": "hadir"
+    }
+  ]
+}
+```
+
+📸 **Screenshot Output History Presensi:**
+![Attendance History Screenshot](./screenshots/attendance-history.png)
+
+---
+
+### Rekap Kehadiran Bulanan  
+**GET** `/api/attendance/summary/{user_id}`
+
+**Response**
+```json
+{
+  "status": "success",
+  "data": {
+    "user_id": 1,
+    "month": "11-2025",
+    "attendance_summary": {
+      "hadir": 20,
+      "izin": 2,
+      "sakit": 1,
+      "alpa": 1
+    }
+  }
+}
+```
+
+📸 **Screenshot Output Rekap Bulanan:**
+![Attendance Summary Screenshot](./screenshots/attendance-summary.png)
+
+---
+
+## 📊 Analisis Kehadiran
+
+### Endpoint: `/api/attendance/analysis`
+**Method:** `POST`
+
+**Request Body:**
+```json
+{
+  "start_date": "2025-11-01",
+  "end_date": "2025-11-30",
+  "group_by": "kelas"
+}
+```
+
+**Response**
+```json
+{
+  "status": "success",
+  "data": {
+    "analysis_period": {
+      "start_date": "2025-11-01",
+      "end_date": "2025-11-30"
+    },
+    "grouped_analysis": [
+      {
+        "group": "kelas 11",
+        "total_users": 30,
+        "attendance_rate": {
+          "hadir_percentage": 90.0,
+          "izin_percentage": 5.0,
+          "sakit_percentage": 3.0,
+          "alpa_percentage": 2.0
+        }
+      }
+    ]
+  }
+}
+```
+
+📸 **Screenshot Output Analisis Kehadiran:**
+![Attendance Analysis Screenshot](./screenshots/attendance-analysis.png)
+
+---
+
+## 👨‍💻 Dikembangkan Oleh
+**Mohammad Nabil Anwar Kencana**  
+SMK Telkom Malang  
+Kelas XI RPL  
