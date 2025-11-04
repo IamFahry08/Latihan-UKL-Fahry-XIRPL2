@@ -77,7 +77,7 @@ http://localhost:3000/api
 ```
 
 📸 **Screenshot Output Login:**
-![Auth Login Screenshot](./screenshots/auth-login.png)
+<img width="1920" height="1080" alt="Screenshot (84)" src="https://github.com/user-attachments/assets/f2b7dbf8-7ae3-4573-97aa-44d577d34d6f" />
 
 ---
 
@@ -296,3 +296,4 @@ http://localhost:3000/api
 **Mohammad Nabil Anwar Kencana**  
 SMK Telkom Malang  
 Kelas XI RPL  
+
