@@ -1,7 +1,7 @@
 # 📘 UKL XI RPL Backend – Sistem Autentikasi & Presensi
 
 ### 🔗 **Link Repository GitHub**
-[👉 Klik di sini untuk membuka repository](https://github.com/Nabilkencana22/UKL-XI-RPL-Backend-)
+[👉 Klik di sini untuk membuka repository](https://github.com/IamFahry08/Latihan-UKL-Fahry-XIRPL2.git)
 
 > 💡 **Catatan:** Pastikan setiap update fitur baru (Auth, Users, Attendance) juga menambahkan screenshot output di bawah bagian “📸 Screenshot Output”.
 
@@ -88,29 +88,28 @@ http://localhost:3000/api
 
 ```json
 {
-  "name": "John Doe",
-  "username": "johndoe",
-  "password": "123456",
-  "role": "siswa"
+  "name": "Fahry Irvan",
+  "email": "fahryirvayudiansyah@gmail.com",
+  "phone": "085872993245",
+  "role": "student"
 }
 ```
 
 **Response**
 ```json
 {
-  "status": "success",
-  "message": "Pengguna berhasil ditambahkan",
-  "data": {
-    "id": 1,
-    "name": "John Doe",
-    "username": "johndoe",
-    "role": "siswa"
-  }
+    "id": 4,
+    "name": "Fahry Irvan",
+    "email": "fahryirvayudiansyah@gmail.com",
+    "phone": "085872993245",
+    "role": "student",
+    "createdAt": "2025-11-04 18:24:56"
 }
 ```
 
 📸 **Screenshot Output Tambah Pengguna:**
-![Users Create Screenshot](.Sreenshoot/Screenshot(84).png)
+<img width="1920" height="1080" alt="Screenshot (92)" src="https://github.com/user-attachments/assets/df00702a-1ad3-4231-a9a5-da110b78c257" />
+
 
 ---
 
@@ -119,29 +118,27 @@ http://localhost:3000/api
 
 ```json
 {
-  "name": "John Updated",
-  "username": "johnupdate",
-  "password": "654321",
-  "role": "karyawan"
+  "email": "fahryirvanyudiansyah@gmail.com",
+  "role": "admin"
 }
+
 ```
 
 **Response**
 ```json
 {
-  "status": "success",
-  "message": "Pengguna berhasil diubah",
-  "data": {
     "id": 1,
-    "name": "John Updated",
-    "username": "johnupdate",
-    "role": "karyawan"
-  }
+    "name": "Fahry Irvan Yudiansyah",
+    "email": "fahryirvanyudiansyah@gmail.com",
+    "phone": "085872993245",
+    "role": "admin",
+    "createdAt": "2025-11-04 17:54:02",
+    "updatedAt": "2025-11-04 17:54:19"
 }
 ```
 
 📸 **Screenshot Output Update Pengguna:**
-![Users Update Screenshot](./screenshots/users-update.png)
+![Users Update Screenshot](https://github.com/IamFahry08/Latihan-UKL-Fahry-XIRPL2/blob/main/Sreenshoot/Screenshot%20(86).png)
 
 ---
 
@@ -151,18 +148,19 @@ http://localhost:3000/api
 **Response**
 ```json
 {
-  "status": "success",
-  "data": {
     "id": 1,
-    "name": "John Updated",
-    "username": "johnupdate",
-    "role": "karyawan"
-  }
+    "name": "Fahry Irvan Yudiansyah",
+    "email": "fahryirvanyudiansyah@gmail.com",
+    "phone": "085872993245",
+    "role": "admin",
+    "createdAt": "2025-11-04 17:54:02",
+    "updatedAt": "2025-11-04 17:54:19"
 }
 ```
 
 📸 **Screenshot Output Get Pengguna:**
-![Users Get Screenshot](./screenshots/users-get.png)
+<img width="1920" height="1080" alt="Screenshot (93)" src="https://github.com/user-attachments/assets/14219e49-5d81-4c6e-81fd-f960508578bd" />
+
 
 ---
 
@@ -173,29 +171,30 @@ http://localhost:3000/api
 
 ```json
 {
-  "user_id": 1,
-  "date": "2025-11-03",
-  "time": "07:45:00"
+  "userId": 1,
+  "status": "alpa"
 }
+
 ```
 
 **Response**
 ```json
 {
-  "status": "success",
-  "message": "Presensi berhasil dicatat",
-  "data": {
-    "attendance_id": 1,
-    "user_id": 1,
-    "date": "2025-11-03",
-    "time": "07:45:00",
-    "status": "hadir"
-  }
+    "status": "Berhasil",
+    "massage": "Presensi berhasil dicatat",
+    "data": [
+        {
+            "id": 1,
+            "userId": 1,
+            "status": "alpa",
+            "date": "2025-11-04 17:54:58"
+        }
+    ]
 }
 ```
 
 📸 **Screenshot Output Presensi:**
-![Attendance Create Screenshot](./screenshots/attendance-create.png)
+![Attendance Create Screenshot](https://github.com/IamFahry08/Latihan-UKL-Fahry-XIRPL2/blob/main/Sreenshoot/Screenshot%20(88).png)
 
 ---
 
@@ -205,21 +204,21 @@ http://localhost:3000/api
 **Response**
 ```json
 {
-  "status": "success",
-  "data": [
-    {
-      "attendance_id": 1,
-      "user_id": 1,
-      "date": "2025-11-03",
-      "time": "07:45:00",
-      "status": "hadir"
-    }
-  ]
+    "status": "success",
+    "message": "Data presensi untuk userId 1 ditemukan",
+    "data": [
+        {
+            "id": 1,
+            "userId": 1,
+            "status": "alpa",
+            "date": "2025-11-04 17:54:58"
+        }
+    ]
 }
 ```
 
 📸 **Screenshot Output History Presensi:**
-![Attendance History Screenshot](./screenshots/attendance-history.png)
+![Attendance History Screenshot](https://github.com/IamFahry08/Latihan-UKL-Fahry-XIRPL2/blob/main/Sreenshoot/Screenshot%20(89).png)
 
 ---
 
@@ -229,22 +228,22 @@ http://localhost:3000/api
 **Response**
 ```json
 {
-  "status": "success",
-  "data": {
-    "user_id": 1,
-    "month": "11-2025",
-    "attendance_summary": {
-      "hadir": 20,
-      "izin": 2,
-      "sakit": 1,
-      "alpa": 1
+    "status": "success",
+    "data": {
+        "user_id": 1,
+        "month": "11-2025",
+        "attendance_summary": {
+            "hadir": 0,
+            "izin": 0,
+            "sakit": 0,
+            "alpa": 1
+        }
     }
-  }
 }
 ```
 
 📸 **Screenshot Output Rekap Bulanan:**
-![Attendance Summary Screenshot](./screenshots/attendance-summary.png)
+![Attendance Summary Screenshot](https://github.com/IamFahry08/Latihan-UKL-Fahry-XIRPL2/blob/main/Sreenshoot/Screenshot%20(90).png)
 
 ---
 
@@ -256,44 +255,27 @@ http://localhost:3000/api
 **Request Body:**
 ```json
 {
-  "start_date": "2025-11-01",
-  "end_date": "2025-11-30",
-  "group_by": "kelas"
+  "start_date": "2024-11-01",
+  "end_date": "2024-11-30"
 }
 ```
 
 **Response**
 ```json
 {
-  "status": "success",
-  "data": {
-    "analysis_period": {
-      "start_date": "2025-11-01",
-      "end_date": "2025-11-30"
-    },
-    "grouped_analysis": [
-      {
-        "group": "kelas 11",
-        "total_users": 30,
-        "attendance_rate": {
-          "hadir_percentage": 90.0,
-          "izin_percentage": 5.0,
-          "sakit_percentage": 3.0,
-          "alpa_percentage": 2.0
-        }
-      }
-    ]
-  }
+    "status": "error",
+    "message": "Tidak ada data di periode ini"
 }
 ```
 
 📸 **Screenshot Output Analisis Kehadiran:**
-![Attendance Analysis Screenshot](./screenshots/attendance-analysis.png)
+![Attendance Analysis Screenshot](https://github.com/IamFahry08/Latihan-UKL-Fahry-XIRPL2/blob/main/Sreenshoot/Screenshot%20(91).png)
 
 ---
 
 ## 👨‍💻 Dikembangkan Oleh
-**Mohammad Nabil Anwar Kencana**  
+**FAHRY IRVAN YUDIANSYAH**  
 SMK Telkom Malang  
-Kelas XI RPL  
+Kelas XI RPL 2  
+
 
