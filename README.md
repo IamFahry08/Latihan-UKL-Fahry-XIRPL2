@@ -32,8 +32,8 @@ Didesain untuk kebutuhan sistem kehadiran sederhana di lingkungan sekolah atau p
 
 1️⃣ **Clone Repository**
 ```bash
-git clone https://github.com/Nabilkencana22/UKL-XI-RPL-Backend-.git
-cd UKL-XI-RPL-Backend-
+git clone https://github.com/IamFahry08/Latihan-UKL-Fahry-XIRPL2.git
+cd Latihan-UKL-Fahry-XIRPL2
 ```
 
 2️⃣ **Install Dependencies**
@@ -277,5 +277,6 @@ http://localhost:3000/api
 **FAHRY IRVAN YUDIANSYAH**  
 SMK Telkom Malang  
 Kelas XI RPL 2  
+
 
 
