@@ -18,14 +18,13 @@ Didesain untuk kebutuhan sistem kehadiran sederhana di lingkungan sekolah atau p
 ---
 
 ## ⚙️ Teknologi yang Digunakan
-- **NestJS (Node.js Framework)**
-- **TypeScript**
-- **JWT (JSON Web Token)**
-- **Bcrypt (Hashing Password)**
-- **DayJS (Date Handling)**
-- **Express.js**
-- **In-memory data (bisa dikembangkan ke PostgreSQL/MySQL)**
-
+- **NestJS (Node.js Framework utama)**
+- **TypeScript (Bahasa pemrograman modern yang digunakan NestJS)**
+- **JWT (JSON Web Token – autentikasi login)**
+- **DayJS (Menangani format waktu dan zona waktu lokal)**
+- **Express.js (Server bawaan dari NestJS)**
+- **In-memory Data Storage (Data sementara tanpa database)**
+- **Postman (Pengujian API endpoint)**
 ---
 
 ## 🚀 Langkah Instalasi
@@ -277,6 +276,7 @@ http://localhost:3000/api
 **FAHRY IRVAN YUDIANSYAH**  
 SMK Telkom Malang  
 Kelas XI RPL 2  
+
 
 
 
